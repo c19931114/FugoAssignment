@@ -15,7 +15,7 @@ struct PublicBaseDataAPIModel: Codable {
     let 實收資本額, 普通股每股面額, 私募股數, 特別股: String?
 }
 
-enum TSE: String, Codable {
+enum TSE: String, Codable, CaseIterable {
     case 未定義 = "XX"
     case 水泥工業 = "01"
     case 食品工業 = "02"

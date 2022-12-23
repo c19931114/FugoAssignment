@@ -13,7 +13,7 @@ class APIManager {
     
     let session: URLSession = URLSession(configuration: .default)
     
-    typealias APICompletionHandler = (Any?, Error?) -> Void
+    typealias APICompletionHandler = ([PublicBaseDataAPIModel]?, Error?) -> Void
     
     func fetchAPIData(query: String,
                       completion: @escaping APICompletionHandler) {
@@ -49,12 +49,8 @@ class APIManager {
     
     private func buildRequest(query: String) -> URLRequest? {
         let baseURL = baseURL.appendingPathComponent(query)
-                
         guard let components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false) else { return nil }
-
-        guard let url = components.url else {
-            return nil
-        }
+        guard let url = components.url else { return nil }
         return buildRequest(url: url)
     }
     

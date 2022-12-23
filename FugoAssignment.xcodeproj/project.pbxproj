@@ -19,6 +19,7 @@
 		F140A51A2955FDC200FF2370 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A5192955FDC200FF2370 /* APIManager.swift */; };
 		F140A51C295600CB00FF2370 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A51B295600CB00FF2370 /* LaunchViewModel.swift */; };
 		F140A51E29560BD800FF2370 /* PublicBaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A51D29560BD800FF2370 /* PublicBaseDataModel.swift */; };
+		F140A52029563B5600FF2370 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A51F29563B5600FF2370 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		F140A5192955FDC200FF2370 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F140A51B295600CB00FF2370 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		F140A51D29560BD800FF2370 /* PublicBaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicBaseDataModel.swift; sourceTree = "<group>"; };
+		F140A51F29563B5600FF2370 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				F140A5192955FDC200FF2370 /* APIManager.swift */,
 				F140A51D29560BD800FF2370 /* PublicBaseDataModel.swift */,
 				F140A5052955EC0700FF2370 /* Assets.xcassets */,
+				F140A51F29563B5600FF2370 /* TabBarController.swift */,
 				F140A5152955FAC600FF2370 /* UIView+Extension.swift */,
 				F140A5072955EC0700FF2370 /* LaunchScreen.storyboard */,
 				F140A50A2955EC0700FF2370 /* Info.plist */,
@@ -210,6 +213,7 @@
 				F140A51A2955FDC200FF2370 /* APIManager.swift in Sources */,
 				F140A51E29560BD800FF2370 /* PublicBaseDataModel.swift in Sources */,
 				F140A5012955EC0400FF2370 /* BaseViewController.swift in Sources */,
+				F140A52029563B5600FF2370 /* TabBarController.swift in Sources */,
 				F140A51C295600CB00FF2370 /* LaunchViewModel.swift in Sources */,
 				F140A4FD2955EC0400FF2370 /* AppDelegate.swift in Sources */,
 				F140A4FF2955EC0400FF2370 /* SceneDelegate.swift in Sources */,

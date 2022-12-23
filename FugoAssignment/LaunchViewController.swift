@@ -31,7 +31,9 @@ class LaunchViewController: BaseViewController {
         super.viewDidLoad()        
         setupUI()
         viewModel.getPublicBaseData { isDone in
-            print("isDone:", isDone)
+            if isDone {
+                self.present(TabBarController(), animated: true)
+            }
         }
     }
     
