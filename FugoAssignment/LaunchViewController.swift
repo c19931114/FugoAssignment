@@ -9,19 +9,32 @@ import UIKit
 
 class LaunchViewController: BaseViewController {
     
-    lazy var logoImageView: UIImageView = {
+    private let viewModel: LaunchViewModel
+    
+    private lazy var logoImageView: UIImageView = {
         let image = UIImage(named: "Fugo_logo")
         let imageView = UIImageView(image: image)
         imageView.backgroundColor = .clear
         return imageView
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
+    init(viewModel: LaunchViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()        
+        setupUI()
+        viewModel.getPublicBaseData { isDone in
+            print("isDone:", isDone)
+        }
+    }
+    
     private func setupUI() {
         view.addSubview(logoImageView)
         logoImageView.snp.makeConstraints {

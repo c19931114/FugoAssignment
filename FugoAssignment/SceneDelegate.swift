@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let launchVC = LaunchViewController() 
+        let launchVC = LaunchViewController(viewModel: LaunchViewModel()) 
         window?.rootViewController = launchVC
         window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
