@@ -1,0 +1,6 @@
+framework module Pods_FugoAssignment {
+  umbrella header "Pods-FugoAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}
