@@ -18,6 +18,13 @@ class LaunchViewController: BaseViewController {
         return imageView
     }()
     
+    private lazy var loadingImageView: UIImageView = {
+        let image = UIImage(named: "loading")
+        let imageView = UIImageView(image: image)
+        imageView.backgroundColor = .clear
+        return imageView
+    }()
+    
     init(viewModel: LaunchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -30,6 +37,10 @@ class LaunchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()        
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.getPublicBaseData { isDone in
             if isDone {
                 self.present(TabBarController(), animated: true)
@@ -41,7 +52,12 @@ class LaunchViewController: BaseViewController {
         view.addSubview(logoImageView)
         logoImageView.snp.makeConstraints {
             $0.width.height.equalTo(view.snp.width).dividedBy(2)
-           $0.center.equalTo(view)
+            $0.center.equalTo(view)
+        }
+        view.addSubview(loadingImageView)
+        loadingImageView.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.top.equalTo(logoImageView.snp.bottom).offset(16)
         }
     }
 }

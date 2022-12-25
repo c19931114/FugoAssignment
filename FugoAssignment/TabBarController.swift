@@ -21,8 +21,8 @@ private enum Tab {
 
     var controller: UIViewController {
         switch self {
-        case .type: return BaseViewController()
-        case .follow: return BaseViewController()
+        case .type: return TypeListViewController(viewModel: TypeListViewModel())
+        case .follow: return FollowListViewConntroller()
         }
     }
 
@@ -46,6 +46,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         modalPresentationStyle = .overFullScreen
+        modalTransitionStyle = .flipHorizontal
         setupTab()
     }
 
