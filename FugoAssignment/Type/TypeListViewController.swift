@@ -11,6 +11,15 @@ class TypeListViewController: BaseViewController {
     
     private let viewModel: TypeListViewModel
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(TypeListCell.self, 
+                           forCellReuseIdentifier: String(describing: TypeListCell.self))
+        tableView.dataSource = self
+        tableView.delegate = self
+        return tableView
+    }()
+    
     init(viewModel: TypeListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -22,7 +31,32 @@ class TypeListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.getTypeList()
+        setupUI()
     }
+    
+    private func setupUI() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+}
+
+extension TypeListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.cellModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TypeListCell.self), for: indexPath)
+        guard let cell = reuseCell as? TypeListCell else { return reuseCell }
+        cell.config(with: viewModel.cellModels[indexPath.row])
+        return cell
+    }
+}
+
+extension TypeListViewController: UITableViewDelegate {
     
 }

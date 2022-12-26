@@ -9,14 +9,18 @@ import Foundation
 
 class TypeListViewModel {
     
-    func getTypeList() -> [(String, Int)] {
+    var cellModels: [TypeListCellModel] = []
+    
+    func getTypeList() {
         let data = getPublicBaseDataAPIModelListDic()
-        var list = [(String, Int)]()
+        var list = [(TSE, String)]()
         for (key, value) in data {
-            list.append((key.rawValue, value.count))
+            list.append((key, "\(value.count)"))
         }
-        list.sort { $0.0 < $1.0 }
-        return list
+        list.sort { $0.0.rawValue < $1.0.rawValue }
+        cellModels = list.compactMap {
+            TypeListCellModel(typeName: "\($0.0)", listCount: $0.1)
+        }
     }
     
     private func getPublicBaseDataAPIModelListDic() -> [TSE: [PublicBaseDataAPIModel]] {

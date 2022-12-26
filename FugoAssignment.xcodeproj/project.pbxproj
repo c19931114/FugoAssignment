@@ -24,6 +24,8 @@
 		F140A5252956431700FF2370 /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A5242956431700FF2370 /* FollowListViewController.swift */; };
 		F140A5292958A21A00FF2370 /* TypeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A5282958A21A00FF2370 /* TypeListViewModel.swift */; };
 		F140A52B2958B5AE00FF2370 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A52A2958B5AE00FF2370 /* UserDefaults+Extensions.swift */; };
+		F140A52E295977A700FF2370 /* TypeListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A52D295977A700FF2370 /* TypeListCellModel.swift */; };
+		F140A5302959798D00FF2370 /* TypeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A52F2959798D00FF2370 /* TypeListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		F140A5242956431700FF2370 /* FollowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
 		F140A5282958A21A00FF2370 /* TypeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListViewModel.swift; sourceTree = "<group>"; };
 		F140A52A2958B5AE00FF2370 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		F140A52D295977A700FF2370 /* TypeListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListCellModel.swift; sourceTree = "<group>"; };
+		F140A52F2959798D00FF2370 /* TypeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			children = (
 				F140A521295642CB00FF2370 /* TypeListViewController.swift */,
 				F140A5282958A21A00FF2370 /* TypeListViewModel.swift */,
+				F140A52F2959798D00FF2370 /* TypeListCell.swift */,
+				F140A52D295977A700FF2370 /* TypeListCellModel.swift */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			files = (
 				F140A52B2958B5AE00FF2370 /* UserDefaults+Extensions.swift in Sources */,
 				F140A51A2955FDC200FF2370 /* APIManager.swift in Sources */,
+				F140A5302959798D00FF2370 /* TypeListCell.swift in Sources */,
 				F140A51E29560BD800FF2370 /* PublicBaseDataModel.swift in Sources */,
 				F140A5012955EC0400FF2370 /* BaseViewController.swift in Sources */,
 				F140A52029563B5600FF2370 /* TabBarController.swift in Sources */,
@@ -267,6 +274,7 @@
 				F140A5252956431700FF2370 /* FollowListViewController.swift in Sources */,
 				F140A5162955FAC600FF2370 /* UIView+Extension.swift in Sources */,
 				F140A5112955F0B500FF2370 /* LaunchViewController.swift in Sources */,
+				F140A52E295977A700FF2370 /* TypeListCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
