@@ -14,7 +14,7 @@ private enum Tab {
 
     var title: String {
         switch self {
-        case .type: return "產業"
+        case .type: return "產業別"
         case .follow: return "追蹤"
         }
     }

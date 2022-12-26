@@ -9,11 +9,11 @@ import Foundation
 
 class TypeListCellModel {
     
-    let typeName: String 
-    let listCount: String
-    
-    init(typeName: String, listCount: String) {
-        self.typeName = typeName
-        self.listCount = listCount
+    let type: TSE 
+    let list: [PublicBaseDataAPIModel]
+        
+    init(type: TSE, list: [PublicBaseDataAPIModel]) {
+        self.type = type
+        self.list = list
     }
 }

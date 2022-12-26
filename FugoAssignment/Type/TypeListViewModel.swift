@@ -12,15 +12,10 @@ class TypeListViewModel {
     var cellModels: [TypeListCellModel] = []
     
     func getTypeList() {
-        let data = getPublicBaseDataAPIModelListDic()
-        var list = [(TSE, String)]()
-        for (key, value) in data {
-            list.append((key, "\(value.count)"))
-        }
-        list.sort { $0.0.rawValue < $1.0.rawValue }
-        cellModels = list.compactMap {
-            TypeListCellModel(typeName: "\($0.0)", listCount: $0.1)
-        }
+        let dic = getPublicBaseDataAPIModelListDic()
+        let array = dic.sorted { $0.0.rawValue < $1.0.rawValue }
+        cellModels = array.compactMap { 
+            TypeListCellModel(type: $0.key, list: $0.value) }
     }
     
     private func getPublicBaseDataAPIModelListDic() -> [TSE: [PublicBaseDataAPIModel]] {

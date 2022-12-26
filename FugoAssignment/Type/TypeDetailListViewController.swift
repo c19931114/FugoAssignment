@@ -1,28 +1,29 @@
 //
-//  TypeListViewController.swift
+//  TypeDetailListViewController.swift
 //  FugoAssignment
 //
-//  Created by Crystal on 2022/12/24.
+//  Created by Crystal on 2022/12/26.
 //
 
 import UIKit
 
-class TypeListViewController: BaseViewController {
+class TypeDetailListViewController: BaseViewController {
     
-    private let viewModel: TypeListViewModel
+    private let viewModel: TypeListCellModel
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(TypeListCell.self, 
-                           forCellReuseIdentifier: String(describing: TypeListCell.self))
+        tableView.register(TypeDetailListCell.self, 
+                           forCellReuseIdentifier: String(describing: TypeDetailListCell.self))
         tableView.dataSource = self
         tableView.delegate = self
         return tableView
     }()
     
-    init(viewModel: TypeListViewModel) {
+    init(viewModel: TypeListCellModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        title = "\(viewModel.type)"
     }
     
     required init?(coder: NSCoder) {
@@ -31,8 +32,6 @@ class TypeListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.getTypeList()
         setupUI()
     }
     
@@ -44,24 +43,24 @@ class TypeListViewController: BaseViewController {
     }
 }
 
-extension TypeListViewController: UITableViewDataSource {
+extension TypeDetailListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cellModels.count
+        return viewModel.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reuseCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TypeListCell.self), for: indexPath)
-        guard let cell = reuseCell as? TypeListCell else { return reuseCell }
-        let cellModel = viewModel.cellModels[indexPath.row]
-        cell.config(with: cellModel)
+        let reuseCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TypeDetailListCell.self), for: indexPath)
+        guard let cell = reuseCell as? TypeDetailListCell else { return reuseCell }
+        let model = viewModel.list[indexPath.row]
+        cell.config(with: model)
         return cell
     }
 }
 
-extension TypeListViewController: UITableViewDelegate {
+extension TypeDetailListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellModel = viewModel.cellModels[indexPath.row]
-        let vc = TypeDetailListViewController(viewModel: cellModel)
+        let model = viewModel.list[indexPath.row]
+        let vc = CompanyDetailViewController(model: model)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
