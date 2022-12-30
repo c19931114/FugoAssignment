@@ -31,6 +31,7 @@
 		F140A53A29598B8500FF2370 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A53929598B8500FF2370 /* CompanyDetailViewController.swift */; };
 		F1C3BC6A295D6CE100CAAD96 /* FollowedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */; };
 		F1C3BC6C295F37FD00CAAD96 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */; };
+		F1C3BC6E295F540700CAAD96 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC6D295F540700CAAD96 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		F140A53929598B8500FF2370 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedListViewModel.swift; sourceTree = "<group>"; };
 		F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
+		F1C3BC6D295F540700CAAD96 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				F140A5262956432100FF2370 /* Follow */,
 				F140A5192955FDC200FF2370 /* APIManager.swift */,
 				F140A51D29560BD800FF2370 /* PublicBaseDataModel.swift */,
+				F1C3BC6D295F540700CAAD96 /* WebViewController.swift */,
 				F140A5052955EC0700FF2370 /* Assets.xcassets */,
 				F140A52C2958B5B200FF2370 /* Extension */,
 				F140A5072955EC0700FF2370 /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 				F140A53229597E7700FF2370 /* TypeDetailListViewController.swift in Sources */,
 				F140A51A2955FDC200FF2370 /* APIManager.swift in Sources */,
 				F140A5302959798D00FF2370 /* TypeListCell.swift in Sources */,
+				F1C3BC6E295F540700CAAD96 /* WebViewController.swift in Sources */,
 				F140A51E29560BD800FF2370 /* PublicBaseDataModel.swift in Sources */,
 				F140A5012955EC0400FF2370 /* BaseViewController.swift in Sources */,
 				F140A52029563B5600FF2370 /* TabBarController.swift in Sources */,
