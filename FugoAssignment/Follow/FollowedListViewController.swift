@@ -33,6 +33,10 @@ class FollowedListViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     private func setupUI() {
         view.addSubview(tableView)
