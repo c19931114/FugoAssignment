@@ -9,7 +9,7 @@ import Foundation
 
 class TypeListCellModel {
     
-    let type: TSE 
+    let type: TSE
     let list: [PublicBaseDataAPIModel]
         
     init(type: TSE, list: [PublicBaseDataAPIModel]) {

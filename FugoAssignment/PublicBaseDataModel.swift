@@ -15,6 +15,12 @@ struct PublicBaseDataAPIModel: Codable {
     let 實收資本額, 普通股每股面額, 私募股數, 特別股: String?
 }
 
+extension PublicBaseDataAPIModel: Equatable {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.公司代號 == rhs.公司代號
+    }
+}
+
 enum TSE: String, Codable, CaseIterable {
     case 未定義 = "XX"
     case 水泥工業 = "01"

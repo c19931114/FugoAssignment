@@ -22,7 +22,7 @@ private enum Tab {
     var controller: UIViewController {
         switch self {
         case .type: return TypeListViewController(viewModel: TypeListViewModel())
-        case .follow: return FollowListViewConntroller()
+        case .follow: return FollowedListViewController(viewModel: FollowedListViewModel())
         }
     }
 

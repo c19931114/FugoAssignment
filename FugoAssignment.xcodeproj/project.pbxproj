@@ -21,7 +21,7 @@
 		F140A51E29560BD800FF2370 /* PublicBaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A51D29560BD800FF2370 /* PublicBaseDataModel.swift */; };
 		F140A52029563B5600FF2370 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A51F29563B5600FF2370 /* TabBarController.swift */; };
 		F140A522295642CB00FF2370 /* TypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A521295642CB00FF2370 /* TypeListViewController.swift */; };
-		F140A5252956431700FF2370 /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A5242956431700FF2370 /* FollowListViewController.swift */; };
+		F140A5252956431700FF2370 /* FollowedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A5242956431700FF2370 /* FollowedListViewController.swift */; };
 		F140A5292958A21A00FF2370 /* TypeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A5282958A21A00FF2370 /* TypeListViewModel.swift */; };
 		F140A52B2958B5AE00FF2370 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A52A2958B5AE00FF2370 /* UserDefaults+Extensions.swift */; };
 		F140A52E295977A700FF2370 /* TypeListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A52D295977A700FF2370 /* TypeListCellModel.swift */; };
@@ -29,7 +29,8 @@
 		F140A53229597E7700FF2370 /* TypeDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A53129597E7700FF2370 /* TypeDetailListViewController.swift */; };
 		F140A53429597EBE00FF2370 /* TypeDetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A53329597EBE00FF2370 /* TypeDetailListCell.swift */; };
 		F140A53A29598B8500FF2370 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A53929598B8500FF2370 /* CompanyDetailViewController.swift */; };
-		F140A53C295991B800FF2370 /* FollowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140A53B295991B700FF2370 /* FollowListViewModel.swift */; };
+		F1C3BC6A295D6CE100CAAD96 /* FollowedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */; };
+		F1C3BC6C295F37FD00CAAD96 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,7 @@
 		F140A51D29560BD800FF2370 /* PublicBaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicBaseDataModel.swift; sourceTree = "<group>"; };
 		F140A51F29563B5600FF2370 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F140A521295642CB00FF2370 /* TypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListViewController.swift; sourceTree = "<group>"; };
-		F140A5242956431700FF2370 /* FollowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
+		F140A5242956431700FF2370 /* FollowedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedListViewController.swift; sourceTree = "<group>"; };
 		F140A5282958A21A00FF2370 /* TypeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListViewModel.swift; sourceTree = "<group>"; };
 		F140A52A2958B5AE00FF2370 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		F140A52D295977A700FF2370 /* TypeListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeListCellModel.swift; sourceTree = "<group>"; };
@@ -58,7 +59,8 @@
 		F140A53129597E7700FF2370 /* TypeDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailListViewController.swift; sourceTree = "<group>"; };
 		F140A53329597EBE00FF2370 /* TypeDetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailListCell.swift; sourceTree = "<group>"; };
 		F140A53929598B8500FF2370 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
-		F140A53B295991B700FF2370 /* FollowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewModel.swift; sourceTree = "<group>"; };
+		F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedListViewModel.swift; sourceTree = "<group>"; };
+		F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,8 @@
 		F140A5262956432100FF2370 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
-				F140A5242956431700FF2370 /* FollowListViewController.swift */,
-				F140A53B295991B700FF2370 /* FollowListViewModel.swift */,
+				F140A5242956431700FF2370 /* FollowedListViewController.swift */,
+				F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 				F140A53129597E7700FF2370 /* TypeDetailListViewController.swift */,
 				F140A53329597EBE00FF2370 /* TypeDetailListCell.swift */,
 				F140A53929598B8500FF2370 /* CompanyDetailViewController.swift */,
+				F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -272,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F140A53C295991B800FF2370 /* FollowListViewModel.swift in Sources */,
 				F140A52B2958B5AE00FF2370 /* UserDefaults+Extensions.swift in Sources */,
 				F140A53229597E7700FF2370 /* TypeDetailListViewController.swift in Sources */,
 				F140A51A2955FDC200FF2370 /* APIManager.swift in Sources */,
@@ -284,10 +286,12 @@
 				F140A51C295600CB00FF2370 /* LaunchViewModel.swift in Sources */,
 				F140A53A29598B8500FF2370 /* CompanyDetailViewController.swift in Sources */,
 				F140A4FD2955EC0400FF2370 /* AppDelegate.swift in Sources */,
+				F1C3BC6C295F37FD00CAAD96 /* CompanyDetailViewModel.swift in Sources */,
 				F140A522295642CB00FF2370 /* TypeListViewController.swift in Sources */,
 				F140A53429597EBE00FF2370 /* TypeDetailListCell.swift in Sources */,
 				F140A4FF2955EC0400FF2370 /* SceneDelegate.swift in Sources */,
-				F140A5252956431700FF2370 /* FollowListViewController.swift in Sources */,
+				F1C3BC6A295D6CE100CAAD96 /* FollowedListViewModel.swift in Sources */,
+				F140A5252956431700FF2370 /* FollowedListViewController.swift in Sources */,
 				F140A5162955FAC600FF2370 /* UIView+Extension.swift in Sources */,
 				F140A5112955F0B500FF2370 /* LaunchViewController.swift in Sources */,
 				F140A52E295977A700FF2370 /* TypeListCellModel.swift in Sources */,

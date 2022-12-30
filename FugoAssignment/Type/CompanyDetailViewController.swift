@@ -9,10 +9,16 @@ import UIKit
 
 class CompanyDetailViewController: BaseViewController {
     
-    private let model: PublicBaseDataAPIModel
+    let viewModel: CompanyDetailViewModel
+    private lazy var barButtonItem: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "star"), 
+                                     style: .done, target: self, 
+                                     action: #selector(starDidTap))
+        return button
+    }()
     
     init(model: PublicBaseDataAPIModel) {
-        self.model = model
+        self.viewModel = CompanyDetailViewModel(model: model)
         super.init(nibName: nil, bundle: nil)
         title = "\(model.公司代號 ?? "") \(model.公司簡稱 ?? "")"
     }
@@ -28,9 +34,16 @@ class CompanyDetailViewController: BaseViewController {
     }
     
     private func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "star"), style: .done, target: self, action: #selector(addTapped))
+        let imageName = viewModel.isFollowed ? "star.fill" : "star"
+        barButtonItem.image = UIImage(systemName: imageName)
+        navigationItem.rightBarButtonItem = barButtonItem
     }
     
-    @objc private func addTapped(sender: UIBarButtonItem) {
+    @objc private func starDidTap(sender: UIBarButtonItem) {
+    
+        viewModel.updataFollowedList { [weak self] isFollowed in
+            let imageName = isFollowed ? "star.fill" : "star"
+            self?.barButtonItem.image = UIImage(systemName: imageName)
+        }
     }
 }
