@@ -64,4 +64,8 @@ extension TypeListViewController: UITableViewDelegate {
         let vc = TypeDetailListViewController(viewModel: cellModel)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }

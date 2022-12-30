@@ -29,15 +29,16 @@ class CompanyDetailViewController: BaseViewController {
         button.setImage(image, for: .normal)
         button.tintColor = .black
         button.addTarget(self, action: #selector(goToWeb), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
     
     let viewModel: CompanyDetailViewModel
+    
     private lazy var barButtonItem: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(systemName: "star"), 
                                      style: .done, target: self, 
                                      action: #selector(starDidTap))
-        button.isHidden = true
         return button
     }()
     

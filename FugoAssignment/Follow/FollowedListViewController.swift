@@ -66,4 +66,7 @@ extension FollowedListViewController: UITableViewDelegate {
         let vc = CompanyDetailViewController(model: model)
         navigationController?.pushViewController(vc, animated: true)
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }
