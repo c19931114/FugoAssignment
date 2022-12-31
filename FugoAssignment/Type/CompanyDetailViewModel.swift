@@ -30,7 +30,7 @@ class CompanyDetailViewModel {
             let dic = try DictionaryEncoder.encode(model)
             let arr = dic.map { [$0: $1] }
             return arr
-        } catch let _  {
+        } catch _  {
             return []
         }
     }

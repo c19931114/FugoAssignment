@@ -105,7 +105,6 @@ class CompanyDetailViewController: BaseViewController {
     }
     
     @objc private func starDidTap(sender: UIBarButtonItem) {
-    
         viewModel.updataFollowedList { [weak self] isFollowed in
             let imageName = isFollowed ? "star.fill" : "star"
             self?.barButtonItem.image = UIImage(systemName: imageName)

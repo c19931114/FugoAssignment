@@ -66,7 +66,21 @@ extension FollowedListViewController: UITableViewDelegate {
         let vc = CompanyDetailViewController(model: model)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            let model = viewModel.list[indexPath.row]
+            viewModel.updataFollowedList(model: model) { [weak self] _ in
+                self?.tableView.reloadData()
+            }
+        }
     }
 }

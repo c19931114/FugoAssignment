@@ -17,6 +17,10 @@ class FollowedListViewModel {
         FollowedListManager.shared.list
     }
     
+    func updataFollowedList(model: PublicBaseDataAPIModel, 
+                            completion: ((Bool) -> Void)) {
+        FollowedListManager.shared.updataFollowedList(model: model, completion: completion)
+    }
 }
 
 class FollowedListManager {
@@ -26,7 +30,7 @@ class FollowedListManager {
     var list: [PublicBaseDataAPIModel] {
         getFollewedList()
     }
-        
+    
     private func getFollewedList() -> [PublicBaseDataAPIModel] {
         let list = UserDefaults.standard.getObject(forKey: "FollowedDataModelList", castTo: [PublicBaseDataAPIModel].self) ?? []
         return list
@@ -39,15 +43,16 @@ class FollowedListManager {
     func updataFollowedList(model: PublicBaseDataAPIModel, 
                             completion: ((Bool) -> Void)) {
         var currentList = list
-        if isFollowed(model: model) {
-            if let index = currentList.firstIndex(of: model) {
-                currentList.remove(at: index)
-                completion(false)
-            }
+        
+        let isFollowed = isFollowed(model: model)
+        if isFollowed, let index = currentList.firstIndex(of: model) {
+            currentList.remove(at: index)
         } else {
             currentList.append(model)
-            completion(true)
         }
+        
         UserDefaults.standard.setObjectToUserDefault(currentList, forKey: "FollowedDataModelList")
+        completion(!isFollowed)
+        
     }
 }
