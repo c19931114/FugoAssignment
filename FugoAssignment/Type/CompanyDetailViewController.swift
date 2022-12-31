@@ -9,6 +9,15 @@ import UIKit
 
 class CompanyDetailViewController: BaseViewController {
     
+    let viewModel: CompanyDetailViewModel
+    
+    private lazy var barButtonItem: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "star"), 
+                                     style: .done, target: self, 
+                                     action: #selector(starDidTap))
+        return button
+    }()
+    
     private let fieldLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
@@ -33,13 +42,13 @@ class CompanyDetailViewController: BaseViewController {
         return button
     }()
     
-    let viewModel: CompanyDetailViewModel
-    
-    private lazy var barButtonItem: UIBarButtonItem = {
-        let button = UIBarButtonItem(image: UIImage(systemName: "star"), 
-                                     style: .done, target: self, 
-                                     action: #selector(starDidTap))
-        return button
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(CompanyDetailCell.self, 
+                           forCellReuseIdentifier: String(describing: CompanyDetailCell.self))
+        tableView.dataSource = self
+        tableView.delegate = self
+        return tableView
     }()
     
     init(model: PublicBaseDataAPIModel) {
@@ -80,6 +89,12 @@ class CompanyDetailViewController: BaseViewController {
             $0.centerY.equalTo(companyLabel)
             $0.width.height.equalTo(32)
         }
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(companyLabel.snp.bottom).offset(8)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
     }
     
     private func configData() {
@@ -103,5 +118,24 @@ class CompanyDetailViewController: BaseViewController {
         let request = URLRequest(url: url)
         let vc = WebViewController(request: request)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension CompanyDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.cellModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseCell = tableView.dequeueReusableCell(withIdentifier: String(describing: CompanyDetailCell.self), for: indexPath)
+        guard let cell = reuseCell as? CompanyDetailCell else { return reuseCell }
+        cell.configData(cellModel: viewModel.cellModels[indexPath.row])
+        return cell
+    }
+}
+
+extension CompanyDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }

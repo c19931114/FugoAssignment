@@ -11,7 +11,7 @@ class TypeListViewController: BaseViewController {
     
     private let viewModel: TypeListViewModel
     
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(TypeListCell.self, 
                            forCellReuseIdentifier: String(describing: TypeListCell.self))

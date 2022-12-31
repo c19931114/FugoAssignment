@@ -32,6 +32,8 @@
 		F1C3BC6A295D6CE100CAAD96 /* FollowedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */; };
 		F1C3BC6C295F37FD00CAAD96 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */; };
 		F1C3BC6E295F540700CAAD96 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC6D295F540700CAAD96 /* WebViewController.swift */; };
+		F1C3BC70295FC5EB00CAAD96 /* CompanyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC6F295FC5EB00CAAD96 /* CompanyDetailCell.swift */; };
+		F1C3BC72295FC7B900CAAD96 /* CompanyDetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3BC71295FC7B900CAAD96 /* CompanyDetailCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		F1C3BC69295D6CE100CAAD96 /* FollowedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedListViewModel.swift; sourceTree = "<group>"; };
 		F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
 		F1C3BC6D295F540700CAAD96 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F1C3BC6F295FC5EB00CAAD96 /* CompanyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailCell.swift; sourceTree = "<group>"; };
+		F1C3BC71295FC7B900CAAD96 /* CompanyDetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				F140A53329597EBE00FF2370 /* TypeDetailListCell.swift */,
 				F140A53929598B8500FF2370 /* CompanyDetailViewController.swift */,
 				F1C3BC6B295F37FD00CAAD96 /* CompanyDetailViewModel.swift */,
+				F1C3BC6F295FC5EB00CAAD96 /* CompanyDetailCell.swift */,
+				F1C3BC71295FC7B900CAAD96 /* CompanyDetailCellModel.swift */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -280,10 +286,12 @@
 			files = (
 				F140A52B2958B5AE00FF2370 /* UserDefaults+Extensions.swift in Sources */,
 				F140A53229597E7700FF2370 /* TypeDetailListViewController.swift in Sources */,
+				F1C3BC72295FC7B900CAAD96 /* CompanyDetailCellModel.swift in Sources */,
 				F140A51A2955FDC200FF2370 /* APIManager.swift in Sources */,
 				F140A5302959798D00FF2370 /* TypeListCell.swift in Sources */,
 				F1C3BC6E295F540700CAAD96 /* WebViewController.swift in Sources */,
 				F140A51E29560BD800FF2370 /* PublicBaseDataModel.swift in Sources */,
+				F1C3BC70295FC5EB00CAAD96 /* CompanyDetailCell.swift in Sources */,
 				F140A5012955EC0400FF2370 /* BaseViewController.swift in Sources */,
 				F140A52029563B5600FF2370 /* TabBarController.swift in Sources */,
 				F140A5292958A21A00FF2370 /* TypeListViewModel.swift in Sources */,
